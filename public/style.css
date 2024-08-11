@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* -----Header--all---------------------- */
+header {
+    background-color: #004d4d;
+    color: #ffd700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+header .logo:hover {
+    color: white;
+    transition: 0.8s;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+header nav a:active{
+    color:aliceblue;
+}
+header nav a:hover {
+    color: #AED3B0;
+    text-decoration: underline;
+    transition: 0.8s;
+}
+/* -----Home-body-------------------------- */
+main {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+.right-container {
+    width: 60%;
+}
+
+.left-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.background-svg {
+    position: absolute;
+    top: 10%;
+    left: -15%;
+    width: 90%;
+    height: 85%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-svg svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-message {
+    text-align: right;
+}
+
+.welcome-message h1 {
+    font-size: 68px;
+    margin: 0;
+}
+
+.welcome-message p {
+    font-size: 40px;
+}
+
+.welcome-message b {
+    color: #F9F54B;
+    
+}
+
+.welcome-message em {
+    font-style: italic;
+    color: #0c0c0c;
+}
+
+.welcome-message a {
+    color: #F9F54B;
+    text-decoration: none;
+}
+
+#here {
+    font-style: italic;
+    text-decoration: underline;
+}
+#here:hover{
+    color:#004d4d;
+    transition: 0.5s;
+}
+
+.welcome-message p:last-of-type {
+    font-size: 22px;
+}
+
+.auth-buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+    background-color: #004d4d;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 20px;
+    margin: 0.5rem 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+.auth-buttons .login:hover{
+    background-color: #fff;
+    color: #004d4d;
+    transition: 0.5s;
+}
+
+.auth-buttons .signup {
+    background-color: #fff;
+    color: #004d4d;
+    border: 2px solid #004d4d;
+}
+.auth-buttons .signup:hover{
+    background-color: #004d4d;
+    color: #fff;
+    transition: 0.5s;
+}
+
+@media (max-width:800px) {
+    .main{
+        height:100vh;
+    }
+    .right-container{
+        display: none;
+    }
+    .left-container{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    header {
+        width: 100vw;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 5px;
+        align-items: end;
+        width: 100%;
+    }
+
+    .background-svg{
+        position: absolute;
+        top: auto;
+        left: auto;
+    }
+}
